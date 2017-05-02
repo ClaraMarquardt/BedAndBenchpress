@@ -1,40 +1,23 @@
-// // content.js
-// chrome.runtime.onMessage.addListener(
-//   function(request, sender, sendResponse) {
-//       // sendResponse(findAddress());
-//         sendResponse("dfdsfdsdf");
 
-//     }
-// );
-
-// alert("fdsafds");
 
 var address=findAddress();
- // alert(address);
-
 
 chrome.storage.local.set({'address_name': address}, function () {
-   // alert(address);
 });
 
 
 
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
-//  	test=["fdsddd"]
 
 		sendResponse("hhhhhfdsafdsfdsa3333333h"); 
-			// sendResponse(findAddress()); 
-// return true;
-
-		// return("fdsddd");
  return true;
 });
 
 
 
 function findAddress() {
-  var long=0;
-  var lat=0;
+  var long=10;
+  var lat=15;
   var node = document.head;
  
 
@@ -53,6 +36,7 @@ function findAddress() {
    }
 
   }
+
   return([long,lat]);
 
 

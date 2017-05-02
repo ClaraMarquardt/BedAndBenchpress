@@ -7,24 +7,29 @@
     "matches": [
       "<all_urls>"
     ],
-    "js": ["jquery-2.1.1.min.js","content.js"]
+    "js": ["jquery-2.1.1.min.js","content.js", "data_pull.js"]
   }
 ],
   "permissions": [
+    "activeTab",
     "tabs",
     "storage",
-    "https://*/*",
-    "http://*/*"
+    // "https://*/*",
+    // "http://*/*"
+    "https://www.airbnb.com/*",
+    "http://www.airbnb.com/*"
   ],
   "background": {
-  "scripts": ["background.js"]
+  "scripts": ["content.js"],
+    "persistent": false
 },
-//   "browser_action": {
-//   "default_icon": "marker.png"
-// }
-"page_action": {
-      "default_name": "Display Map",
-      "default_icon": "marker.png",
-      "default_popup": "popup.html"
+  "browser_action": {
+    "default_icon": "marker.png",
+    "default_popup": "popup.html"
   }
+// "page_action": {
+//       "default_name":  "Display Map",
+//       "default_icon":  "marker.png",
+//       "default_popup": "popup.html"
+//   }
 }
